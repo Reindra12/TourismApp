@@ -2,13 +2,13 @@ package com.dicoding.tourismapp.core.utils
 
 import com.dicoding.tourismapp.core.data.source.local.entity.TourismEntity
 import com.dicoding.tourismapp.core.data.source.remote.response.TourismResponse
+import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
 
 object DataMapper {
-    fun mapResponsesToEntities(input: List<TourismResponse>): List<TourismEntity> {
-        val tourismList = ArrayList<TourismEntity>()
+    fun mapResponsesToEntities(input: List<TourismEntity>): List<Tourism> =
         input.map {
-            val tourism = TourismEntity(
-                tourismId = it.id,
+            Tourism(
+                tourismId = it.tourismId,
                 description = it.description,
                 name = it.name,
                 address = it.address,
@@ -16,10 +16,20 @@ object DataMapper {
                 longitude = it.longitude,
                 like = it.like,
                 image = it.image,
-                isFavorite = false
+                isFavorite = it.isFavorite
             )
-            tourismList.add(tourism)
         }
-        return tourismList
-    }
+
+    fun mapDomainToEntity(input: Tourism) = TourismEntity(
+        tourismId = input.tourismId,
+        description = input.description,
+        name = input.name,
+        address = input.address,
+        latitude = input.latitude,
+        longitude = input.longitude,
+        like = input.like,
+        image = input.image,
+        isFavorite = input.isFavorite
+
+    )
 }
