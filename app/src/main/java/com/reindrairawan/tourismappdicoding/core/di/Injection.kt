@@ -13,7 +13,7 @@ import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiC
 import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiService
 
 object Injection {
-    fun provideRepository(context: Context): TourismRepository {
+    private fun provideRepository(context: Context): ITourismRepository {
         val database = TourismDatabase.getInstance(context)
 
         val remoteDataSource = RemoteDataSource.getInstance(ApiConfig.provideApiService())
@@ -21,5 +21,10 @@ object Injection {
         val appExecutors = AppExecutors()
 
         return TourismRepository.getInstance(remoteDataSource, localDataSource, appExecutors)
+    }
+
+    fun provideTourismUseCase(context: Context): TourismUseCase {
+        val repository = provideRepository(context)
+        return TourismInteractor(repository)
     }
 }

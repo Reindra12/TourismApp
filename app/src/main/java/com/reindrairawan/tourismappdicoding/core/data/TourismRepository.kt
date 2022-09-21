@@ -10,12 +10,13 @@ import com.dicoding.tourismapp.core.data.source.remote.response.TourismResponse
 import com.dicoding.tourismapp.core.utils.AppExecutors
 import com.dicoding.tourismapp.core.utils.DataMapper
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
+import com.reindrairawan.tourismappdicoding.core.domain.repository.ITourismRepository
 
 class TourismRepository private constructor(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource,
     private val appExecutors: AppExecutors
-) {
+) : ITourismRepository {
 
     companion object {
         @Volatile
@@ -31,7 +32,7 @@ class TourismRepository private constructor(
             }
     }
 
-    fun getAllTourism(): LiveData<Resource<List<Tourism>>> =
+   override fun getAllTourism(): LiveData<Resource<List<Tourism>>> =
         object : NetworkBoundResource<List<Tourism>, List<TourismResponse>>(appExecutors) {
             override fun loadFromDB(): LiveData<List<Tourism>> {
                 return Transformations.map(localDataSource.getAllTourism()) {
@@ -51,13 +52,13 @@ class TourismRepository private constructor(
             }
         }.asLiveData()
 
-    fun getFavoriteTourism(): LiveData<List<Tourism>> {
+   override fun getFavoriteTourism(): LiveData<List<Tourism>> {
         return Transformations.map(localDataSource.getFavoriteTourism()) {
             DataMapper.mapEntitiesToDomain(it)
         }
     }
 
-    fun setFavoriteTourism(tourism: Tourism, state: Boolean) {
+   override fun setFavoriteTourism(tourism: Tourism, state: Boolean) {
         val tourismEntity = DataMapper.mapDomainToEntity(tourism)
         appExecutors.diskIO().execute { localDataSource.setFavoriteTourism(tourismEntity, state) }
     }
