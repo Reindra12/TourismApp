@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import com.dicoding.tourismapp.core.data.Resource
 import com.dicoding.tourismapp.core.data.TourismRepository
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
+import com.reindrairawan.tourismappdicoding.core.domain.repository.ITourismRepository
 
-class TourismInteractor(private val tourismRepository: TourismRepository) : TourismUseCase {
+class TourismInteractor(private val tourismRepository: ITourismRepository): TourismUseCase {
+
     override fun getAllTourism() = tourismRepository.getAllTourism()
 
     override fun getFavoriteTourism() = tourismRepository.getFavoriteTourism()
