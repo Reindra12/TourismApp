@@ -11,6 +11,9 @@ import com.dicoding.tourismapp.core.utils.AppExecutors
 import com.dicoding.tourismapp.core.utils.JsonHelper
 import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiConfig
 import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiService
+import com.reindrairawan.tourismappdicoding.core.domain.repository.ITourismRepository
+import com.reindrairawan.tourismappdicoding.core.domain.usecase.TourismInteractor
+import com.reindrairawan.tourismappdicoding.core.domain.usecase.TourismUseCase
 
 object Injection {
     private fun provideRepository(context: Context): ITourismRepository {
