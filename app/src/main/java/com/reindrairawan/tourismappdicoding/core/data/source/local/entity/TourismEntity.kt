@@ -1,4 +1,4 @@
-package com.dicoding.tourismapp.core.data.source.local.entity
+package com.reindrairawan.tourismappdicoding.core.data.source.local.entity
 
 import android.os.Parcelable
 import androidx.annotation.NonNull

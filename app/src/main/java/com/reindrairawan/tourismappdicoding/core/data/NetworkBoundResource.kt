@@ -1,16 +1,7 @@
-package com.dicoding.tourismapp.core.data
+package com.reindrairawan.tourismappdicoding.core.data
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import com.dicoding.tourismapp.core.data.source.remote.network.ApiResponse
-
-import com.dicoding.tourismapp.core.utils.AppExecutors
-import io.reactivex.BackpressureStrategy
-import io.reactivex.Flowable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
-import io.reactivex.subjects.PublishSubject
+import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiResponse
+import com.reindrairawan.tourismappdicoding.core.utils.AppExecutors
 import kotlinx.coroutines.flow.*
 
 abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecutors: AppExecutors) {

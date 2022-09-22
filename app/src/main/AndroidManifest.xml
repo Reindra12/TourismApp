@@ -13,6 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".MyApplication"
         android:theme="@style/Theme.TourismAppDicoding"
         tools:targetApi="31">
         <activity
@@ -25,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dicoding.tourismapp.detail.DetailTourismActivity"
+            android:name="com.reindrairawan.tourismappdicoding.detail.DetailTourismActivity"
             android:label="@string/title_activity_detail_home"
             android:theme="@style/Theme.TourismAppDicoding" />
     </application>

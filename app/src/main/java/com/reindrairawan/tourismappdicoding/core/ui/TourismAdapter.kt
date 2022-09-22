@@ -1,17 +1,13 @@
-package com.dicoding.tourismapp.core.ui
+package com.reindrairawan.tourismappdicoding.core.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-
-import com.dicoding.tourismapp.core.data.source.local.entity.TourismEntity
-
 import com.reindrairawan.tourismappdicoding.R
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
 import com.reindrairawan.tourismappdicoding.databinding.ItemListTourismBinding
-import java.util.ArrayList
 
 class TourismAdapter : RecyclerView.Adapter<TourismAdapter.ListViewHolder>() {
 

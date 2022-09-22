@@ -1,14 +1,14 @@
 package com.reindrairawan.tourismappdicoding
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.dicoding.tourismapp.favorite.FavoriteFragment
-import com.dicoding.tourismapp.home.HomeFragment
+import com.reindrairawan.tourismappdicoding.favorite.FavoriteFragment
+import com.reindrairawan.tourismappdicoding.home.HomeFragment
 import com.google.android.material.navigation.NavigationView
 import com.reindrairawan.tourismappdicoding.databinding.ActivityMainBinding
 
