@@ -13,21 +13,5 @@ abstract class TourismDatabase : RoomDatabase() {
 
     abstract fun tourismDao(): TourismDao
 
-    companion object {
-        @Volatile
-        private var INSTANCE: TourismDatabase? = null
 
-        fun getInstance(context: Context): TourismDatabase =
-            INSTANCE ?: synchronized(this) {
-            val instance = Room.databaseBuilder(
-                context.applicationContext,
-                TourismDatabase::class.java,
-                "Tourismnew.db"
-            )
-                .fallbackToDestructiveMigration()
-                .build()
-            INSTANCE = instance
-            instance
-        }
-    }
 }
