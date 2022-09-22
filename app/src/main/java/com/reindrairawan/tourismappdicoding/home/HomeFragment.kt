@@ -9,14 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.reindrairawan.tourismappdicoding.core.data.Resource
-import com.reindrairawan.tourismappdicoding.core.ui.ViewModelFactory
 import com.reindrairawan.tourismappdicoding.detail.DetailTourismActivity
 import com.reindrairawan.tourismappdicoding.R
 import com.reindrairawan.tourismappdicoding.databinding.FragmentHomeBinding
 
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private val homeViewModel: HomeViewModel by viewModel()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -41,8 +42,8 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             }
 
-            val factory = ViewModelFactory.getInstance(requireActivity())
-            homeViewModel = ViewModelProvider(this, factory)[HomeViewModel::class.java]
+//            val factory = ViewModelFactory.getInstance(requireActivity())
+//            homeViewModel = ViewModelProvider(this, factory)[HomeViewModel::class.java]
 
             homeViewModel.tourism.observe(viewLifecycleOwner, { tourism ->
                 if (tourism != null) {
