@@ -1,4 +1,4 @@
-package com.dicoding.tourismapp.home
+package com.reindrairawan.tourismappdicoding.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,14 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.tourismapp.core.data.Resource
-import com.dicoding.tourismapp.core.ui.ViewModelFactory
-import com.dicoding.tourismapp.detail.DetailTourismActivity
+import com.reindrairawan.tourismappdicoding.core.data.Resource
+import com.reindrairawan.tourismappdicoding.core.ui.ViewModelFactory
+import com.reindrairawan.tourismappdicoding.detail.DetailTourismActivity
 import com.reindrairawan.tourismappdicoding.R
-
 import com.reindrairawan.tourismappdicoding.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -36,7 +34,7 @@ class HomeFragment : Fragment() {
 
         if (activity != null) {
 
-            val tourismAdapter = com.dicoding.tourismapp.core.ui.TourismAdapter()
+            val tourismAdapter = com.reindrairawan.tourismappdicoding.core.ui.TourismAdapter()
             tourismAdapter.onItemClick = { selectedData ->
                 val intent = Intent(activity, DetailTourismActivity::class.java)
                 intent.putExtra(DetailTourismActivity.EXTRA_DATA, selectedData)

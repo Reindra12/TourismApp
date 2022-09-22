@@ -1,13 +1,12 @@
-package com.dicoding.tourismapp.core.ui
+package com.reindrairawan.tourismappdicoding.core.ui
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.tourismapp.core.data.TourismRepository
-import com.dicoding.tourismapp.core.di.Injection
-import com.dicoding.tourismapp.detail.DetailTourismViewModel
-import com.dicoding.tourismapp.favorite.FavoriteViewModel
-import com.dicoding.tourismapp.home.HomeViewModel
+import com.reindrairawan.tourismappdicoding.core.di.Injection
+import com.reindrairawan.tourismappdicoding.detail.DetailTourismViewModel
+import com.reindrairawan.tourismappdicoding.favorite.FavoriteViewModel
+import com.reindrairawan.tourismappdicoding.home.HomeViewModel
 import com.reindrairawan.tourismappdicoding.core.domain.usecase.TourismUseCase
 
 class ViewModelFactory private constructor(private val tourismUseCase: TourismUseCase) :

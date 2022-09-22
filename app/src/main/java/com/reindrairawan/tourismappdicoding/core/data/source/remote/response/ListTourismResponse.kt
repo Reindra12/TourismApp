@@ -1,6 +1,6 @@
 package com.reindrairawan.tourismappdicoding.core.data.source.remote.response
 
-import com.dicoding.tourismapp.core.data.source.remote.response.TourismResponse
+import com.reindrairawan.tourismappdicoding.core.data.source.remote.response.TourismResponse
 import com.google.gson.annotations.SerializedName
 
 data class ListTourismResponse(

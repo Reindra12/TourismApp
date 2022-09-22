@@ -1,9 +1,7 @@
-package com.dicoding.tourismapp.core.data.source.local
+package com.reindrairawan.tourismappdicoding.core.data.source.local
 
-import androidx.lifecycle.LiveData
-import com.dicoding.tourismapp.core.data.source.local.entity.TourismEntity
-import com.dicoding.tourismapp.core.data.source.local.room.TourismDao
-import io.reactivex.Flowable
+import com.reindrairawan.tourismappdicoding.core.data.source.local.entity.TourismEntity
+import com.reindrairawan.tourismappdicoding.core.data.source.local.room.TourismDao
 import kotlinx.coroutines.flow.Flow
 
 class LocalDataSource private constructor(private val tourismDao: TourismDao) {

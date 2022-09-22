@@ -1,9 +1,7 @@
-package com.dicoding.tourismapp.home
+package com.reindrairawan.tourismappdicoding.home
 
-import androidx.lifecycle.LiveDataReactiveStreams
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.dicoding.tourismapp.core.data.TourismRepository
 import com.reindrairawan.tourismappdicoding.core.domain.usecase.TourismUseCase
 
 class HomeViewModel(tourismUseCase: TourismUseCase) : ViewModel() {

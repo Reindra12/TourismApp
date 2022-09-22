@@ -1,7 +1,7 @@
-package com.dicoding.tourismapp.core.utils
+package com.reindrairawan.tourismappdicoding.core.utils
 
-import com.dicoding.tourismapp.core.data.source.local.entity.TourismEntity
-import com.dicoding.tourismapp.core.data.source.remote.response.TourismResponse
+import com.reindrairawan.tourismappdicoding.core.data.source.local.entity.TourismEntity
+import com.reindrairawan.tourismappdicoding.core.data.source.remote.response.TourismResponse
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
 
 object DataMapper {

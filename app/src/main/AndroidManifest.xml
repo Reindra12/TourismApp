@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dicoding.tourismapp.detail.DetailTourismActivity"
+            android:name="com.reindrairawan.tourismappdicoding.detail.DetailTourismActivity"
             android:label="@string/title_activity_detail_home"
             android:theme="@style/Theme.TourismAppDicoding" />
     </application>

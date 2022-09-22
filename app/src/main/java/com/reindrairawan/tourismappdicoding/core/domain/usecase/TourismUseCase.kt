@@ -1,9 +1,7 @@
 package com.reindrairawan.tourismappdicoding.core.domain.usecase
 
-import androidx.lifecycle.LiveData
-import com.dicoding.tourismapp.core.data.Resource
+import com.reindrairawan.tourismappdicoding.core.data.Resource
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
-import io.reactivex.Flowable
 import kotlinx.coroutines.flow.Flow
 
 interface TourismUseCase {

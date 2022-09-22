@@ -1,16 +1,12 @@
-package com.dicoding.tourismapp.core.di
+package com.reindrairawan.tourismappdicoding.core.di
 
 import android.content.Context
-
-import com.dicoding.tourismapp.core.data.source.local.LocalDataSource
-import com.dicoding.tourismapp.core.data.source.local.room.TourismDatabase
-
-import com.dicoding.tourismapp.core.data.TourismRepository
-import com.dicoding.tourismapp.core.data.source.remote.RemoteDataSource
-import com.dicoding.tourismapp.core.utils.AppExecutors
-import com.dicoding.tourismapp.core.utils.JsonHelper
+import com.reindrairawan.tourismappdicoding.core.data.TourismRepository
+import com.reindrairawan.tourismappdicoding.core.data.source.local.LocalDataSource
+import com.reindrairawan.tourismappdicoding.core.data.source.local.room.TourismDatabase
+import com.reindrairawan.tourismappdicoding.core.data.source.remote.RemoteDataSource
+import com.reindrairawan.tourismappdicoding.core.utils.AppExecutors
 import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiConfig
-import com.reindrairawan.tourismappdicoding.core.data.source.remote.network.ApiService
 import com.reindrairawan.tourismappdicoding.core.domain.repository.ITourismRepository
 import com.reindrairawan.tourismappdicoding.core.domain.usecase.TourismInteractor
 import com.reindrairawan.tourismappdicoding.core.domain.usecase.TourismUseCase

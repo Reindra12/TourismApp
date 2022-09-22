@@ -1,13 +1,11 @@
-package com.dicoding.tourismapp.detail
+package com.reindrairawan.tourismappdicoding.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-
-import com.dicoding.tourismapp.core.data.source.local.entity.TourismEntity
-import com.dicoding.tourismapp.core.ui.ViewModelFactory
+import com.reindrairawan.tourismappdicoding.core.ui.ViewModelFactory
 import com.reindrairawan.tourismappdicoding.R
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
 import com.reindrairawan.tourismappdicoding.databinding.ActivityDetailTourismBinding

@@ -1,4 +1,4 @@
-package com.dicoding.tourismapp.core.utils
+package com.reindrairawan.tourismappdicoding.core.utils
 
 import android.os.Handler
 import android.os.Looper
