@@ -14,12 +14,12 @@ import kotlinx.coroutines.flow.map
 
 class TourismRepository(
     private val remoteDataSource: RemoteDataSource,
-    private val localDataSource: LocalDataSource,
+    private val localDataSource: com.reindrairawan.tourismappdicoding.core.data.source.local.LocalDataSource,
     private val appExecutors: AppExecutors
 ) : ITourismRepository {
 
-   override fun getAllTourism(): Flow<Resource<List<Tourism>>> =
-        object : NetworkBoundResource<List<Tourism>, List<TourismResponse>>(appExecutors) {
+   override fun getAllTourism(): Flow<com.reindrairawan.tourismappdicoding.core.data.Resource<List<Tourism>>> =
+        object : com.reindrairawan.tourismappdicoding.core.data.NetworkBoundResource<List<Tourism>, List<TourismResponse>>(appExecutors) {
             override fun loadFromDB(): Flow<List<Tourism>> {
                 return localDataSource.getAllTourism().map { DataMapper.mapEntitiesToDomain(it) }
             }
