@@ -5,9 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.reindrairawan.tourismappdicoding.R
+import com.reindrairawan.tourismappdicoding.core.R
+import com.reindrairawan.tourismappdicoding.core.databinding.ItemListTourismBinding
 import com.reindrairawan.tourismappdicoding.core.domain.model.Tourism
-import com.reindrairawan.tourismappdicoding.databinding.ItemListTourismBinding
+
 
 class TourismAdapter : RecyclerView.Adapter<TourismAdapter.ListViewHolder>() {
 
