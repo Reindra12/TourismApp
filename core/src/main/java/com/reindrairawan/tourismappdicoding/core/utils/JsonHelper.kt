@@ -2,7 +2,8 @@ package com.reindrairawan.tourismappdicoding.core.utils
 
 import android.content.Context
 import com.reindrairawan.tourismappdicoding.core.data.source.remote.response.TourismResponse
-import com.reindrairawan.tourismappdicoding.R
+
+import com.reindrairawan.tourismappdicoding.core.R
 import org.json.JSONObject
 import java.io.IOException
 
