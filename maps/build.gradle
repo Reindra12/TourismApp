@@ -13,6 +13,7 @@ android {
 
     defaultConfig {
         minSdk 21
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,6 +27,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -39,6 +41,7 @@ android {
 dependencies {
     implementation project(":core")
     implementation project(":app")
+    implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.4.0'
